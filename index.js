@@ -2,14 +2,15 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 
 // TODO: Create an array of questions for user input
-const question = async () => {
-    const data = await inquirer
+const questions = () => {
+    return inquirer
         .prompt([{
             type: "input",
-            message: "Enter is the project title?",
+            message: "Enter the project title",
             name: "title"
         },
         {
@@ -58,7 +59,6 @@ const question = async () => {
             name: "email"
         }
         ]);
-    return data
 }
 
 
@@ -68,8 +68,11 @@ function writeToFile(fileName, data) { }
 // TODO: Create a function to initialize app
 async function init() {
     try {
-        data = await question();
+        const data = await questions();
         console.log(data);
+        // licence key?????
+        const markDown = await generateMarkdown(data);
+        console.log(markDown);
     }
     catch (e) {
         console.log(e);
