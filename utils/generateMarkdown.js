@@ -1,24 +1,15 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+// Renders licence
+function renderLicenseBadge(data) {
+  return `![License](https://img.shields.io/badge/License-${data.licence}%201.0-lightblue.svg)]`
+}
+// Renders title
+function renderTitle(data) {
+  return `${data.title}`
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderTableOfContence() {
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
-
-// TODO: Create a function to generate markdown for README
-async function generateMarkdown(data) {
-  return `
-
-  ![License](https://img.shields.io/badge/License-${data.licence}%201.0-lightblue.svg)]
-  
-  # ${data.title}
-
-  ## Table of Contents
+  return `## Table of Contents
   
   [Description](#description)
   [Installation](#installation)
@@ -26,37 +17,86 @@ async function generateMarkdown(data) {
   [License](#license)
   [Contributing](#contributing)
   [Tests](#tests)
-  [Questions](#questions) 
+  [Questions](#questions)
+  `
+}
+
+function renderDescription(data) {
+  return `${data.description}`
+}
+
+function renderInstallation(data) {
+  return `${data.installation}`
+}
+
+function renderUsage(data) {
+  return `${data.usage}`
+}
+
+function renderLicence(data) {
+  return `${data.licence}`
+}
+
+function renderContributions(data) {
+  return `${data.contributions}`
+}
+
+function renderTests(data) {
+  return `${data.tests}`
+}
+
+function renderGithub(data) {
+  return `${data.github}`
+}
+
+function renderEmail(data) {
+  return `${data.email}`
+}
+
+
+// TODO: Create a function to generate markdown for README
+
+
+async function generateMarkdown(data) {
+  // const { licence, tile, } = data
+
+  return `
+
+  ${renderLicenseBadge(data)}
+  
+  # ${renderTitle(data)}
+
+  ${renderTableOfContence(data)}
 
   ## Description 
 
-  ${data.description}
+  ${renderDescription(data)}
   
   ## Installation
 
-  ${data.installation}
+  ${renderInstallation(data)}
   
   ## Usage 
 
-  ${data.usage}
+  ${renderUsage(data)}
 
   ## License 
 
-  ${data.license}
+  ${renderLicence(data)}
 
-  ## Contributing 
+  ## Contributions 
 
-  ${data.contributing}
+  ${renderContributions(data)}
 
   ## Tests 
 
-  ${data.tests}
+  ${renderTests(data)}
   
   ## Questions 
 
   Should you have any questions, please contact me: 
-  Git Hub - https://github.com/${data.github}
-  Email - ${data.email}
+  Git Hub - https://github.com/${renderGithub(data)}
+  Email - ${renderEmail(data)}
   `
 }
 
