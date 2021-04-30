@@ -30,13 +30,13 @@ const questions = () => {
         },
         {
             type: "list",
-            message: "Select a license",
+            message: "Select a licence",
             choices: [
-                "1",
-                "2",
-                "3"
+                "MIT Licence",
+                "BSD 2-Clause 'Simplified' Licence",
+                "BSD 3-Clause New or Revised Licence"
             ],
-            name: "license"
+            name: "licence"
         },
         {
             type: "input",
@@ -73,6 +73,9 @@ async function init() {
         // licence key?????
         const markDown = await generateMarkdown(data);
         console.log(markDown);
+        fs.appendFile('README.md', markDown, (err) => {
+            err ? console.log(err) : console.log("README Created")
+        });
     }
     catch (e) {
         console.log(e);

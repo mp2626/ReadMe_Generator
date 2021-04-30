@@ -1,6 +1,10 @@
 // Renders licence
 function renderLicenseBadge(data) {
-  return `![License](https://img.shields.io/badge/License-${data.licence}%201.0-lightblue.svg)]`
+  const { licence } = data
+
+  noSpace = licence.replace(/\s+/g, '')
+
+  return `![License](https://img.shields.io/badge/License-${noSpace}%201.0-lightblue.svg)]`
 }
 // Renders title
 function renderTitle(data) {
@@ -34,6 +38,7 @@ function renderUsage(data) {
 }
 
 function renderLicence(data) {
+
   return `${data.licence}`
 }
 
