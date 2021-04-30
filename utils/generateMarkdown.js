@@ -1,14 +1,33 @@
 // Renders licence
 function renderLicenseBadge(data) {
-  const { licence } = data
 
-  noSpace = licence.replace(/\s+/g, '')
-
-  return `![License](https://img.shields.io/badge/License-${noSpace}%201.0-lightblue.svg)]`
+  if (data == "MIT Licence") {
+    return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
+  }
+  else if (data == "Apache-2.0") {
+    return "![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)"
+  }
+  else if (data == "BSD 2-Clause") {
+    return "![License: BSD 2-Clause](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)"
+  }
+  else {
+    return "![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)"
+  }
 }
-// Renders title
-function renderTitle(data) {
-  return `${data.title}`
+
+function renderLicenceTerms(data) {
+  if (data == "MIT Licence") {
+    return "https://opensource.org/licenses/MIT"
+  }
+  else if (data == "Apache-2.0") {
+    return "https://opensource.org/licenses/Apache-2.0"
+  }
+  else if (data == "BSD 2-Clause") {
+    return "https://opensource.org/licenses/BSD-2-Clause"
+  }
+  else {
+    return "https://opensource.org/licenses/BSD-3-Clause"
+  }
 }
 
 function renderTableOfContence() {
@@ -25,83 +44,60 @@ function renderTableOfContence() {
   `
 }
 
-function renderDescription(data) {
-  return `${data.description}`
-}
-
-function renderInstallation(data) {
-  return `${data.installation}`
-}
-
-function renderUsage(data) {
-  return `${data.usage}`
-}
-
-function renderLicence(data) {
-
-  return `${data.licence}`
-}
-
-function renderContributions(data) {
-  return `${data.contributions}`
-}
-
-function renderTests(data) {
-  return `${data.tests}`
-}
-
-function renderGithub(data) {
-  return `${data.github}`
-}
-
-function renderEmail(data) {
-  return `${data.email}`
-}
-
-
 // TODO: Create a function to generate markdown for README
 
-
 async function generateMarkdown(data) {
-  // const { licence, tile, } = data
+
+  const {
+    title,
+    description,
+    installation,
+    usage,
+    licence,
+    contributions,
+    tests,
+    github,
+    email } = data
 
   return `
 
-  ${renderLicenseBadge(data)}
+  ${renderLicenseBadge(licence)}
   
-  # ${renderTitle(data)}
+  # ${title}
 
-  ${renderTableOfContence(data)}
+  ${renderTableOfContence()}
 
   ## Description 
 
-  ${renderDescription(data)}
+  ${description}
   
   ## Installation
 
-  ${renderInstallation(data)}
+  ${installation}
   
   ## Usage 
 
-  ${renderUsage(data)}
+  ${usage}
 
   ## License 
 
-  ${renderLicence(data)}
+  ${licence}
+
+  To review the licence terms please follow the link - ${renderLicenceTerms(licence)}
 
   ## Contributions 
 
-  ${renderContributions(data)}
+  ${contributions}
 
   ## Tests 
 
-  ${renderTests(data)}
+  ${tests}
   
   ## Questions 
 
   Should you have any questions, please contact me: 
-  Git Hub - https://github.com/${renderGithub(data)}
-  Email - ${renderEmail(data)}
+  Git Hub - https://github.com/${github}
+  Email - ${email}
   `
 }
 

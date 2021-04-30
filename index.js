@@ -33,8 +33,9 @@ const questions = () => {
             message: "Select a licence",
             choices: [
                 "MIT Licence",
-                "BSD 2-Clause 'Simplified' Licence",
-                "BSD 3-Clause New or Revised Licence"
+                "Apache-2.0",
+                "BSD 2-Clause",
+                "BSD 3-Clause"
             ],
             name: "licence"
         },
