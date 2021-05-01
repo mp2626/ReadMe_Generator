@@ -1,8 +1,8 @@
 
 
-  ![License: BSD 2-Clause](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)
+  ![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)
   
-  # d
+  # ffef
 
   ## Table of Contents
   
@@ -10,40 +10,40 @@
   [Installation](#installation)
   [Usage](#usage)
   [License](#license)
-  [Contributing](#contributing)
+  [Contributing](#contributions)
   [Tests](#tests)
   [Questions](#questions)
   
-
+  
   ## Description 
 
-  d
+  fef
   
   ## Installation
 
-  d
+  efe
   
   ## Usage 
 
-  d
+  fef
 
   ## License 
 
-  BSD 2-Clause
+  BSD 3-Clause
 
-  https://opensource.org/licenses/BSD-2-Clause
+  To review the licence terms, please follow the link - https://opensource.org/licenses/BSD-3-Clause
 
   ## Contributions 
 
-  d
+  fefe
 
   ## Tests 
 
-  d
+  fef
   
   ## Questions 
 
   Should you have any questions, please contact me: 
-  Git Hub - https://github.com/d
-  Email - d
+  Git Hub - https://github.com/efe
+  Email - fef
   

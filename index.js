@@ -4,7 +4,6 @@ const fs = require('fs');
 const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer
@@ -62,19 +61,14 @@ const questions = () => {
         ]);
 }
 
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
-
 // TODO: Create a function to initialize app
 async function init() {
     try {
         const data = await questions();
         console.log(data);
-        // licence key?????
         const markDown = await generateMarkdown(data);
         console.log(markDown);
-        fs.appendFile('README.md', markDown, (err) => {
+        fs.writeFile('README.md', markDown, (err) => {
             err ? console.log(err) : console.log("README Created")
         });
     }
@@ -82,6 +76,5 @@ async function init() {
         console.log(e);
     }
 }
-
 // Function call to initialize app
 init();
