@@ -1,10 +1,9 @@
-// TODO: Include packages needed for this application
+// requires packages for application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// generates questions for user
 const questions = () => {
     return inquirer
         .prompt([{
@@ -61,7 +60,8 @@ const questions = () => {
         ]);
 }
 
-// TODO: Create a function to initialize app
+// function to call relevant function in order to generate the README. Using await to insure-
+// that the require data have been create/captured prior to continuing.
 async function init() {
     try {
         const data = await questions();
@@ -76,5 +76,5 @@ async function init() {
         console.log(e);
     }
 }
-// Function call to initialize app
+// initializes the application on load
 init();

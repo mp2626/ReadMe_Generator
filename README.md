@@ -1,49 +1,88 @@
+# README Generator
+ 
+Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package. Review the Professional README Guide as a reminder of everything that a high-quality, professional README should contain.
+
+# User Story
+
+AS A developer
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
+
+# Acceptance Criteria
+
+GIVEN a command-line application that accepts user input
+
+WHEN I am prompted for information about my application repository
+THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+
+WHEN I enter my project title
+THEN this is displayed as the title of the README
+
+WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+
+WHEN I choose a license for my application from a list of options
+THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+
+WHEN I enter my GitHub username
+THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+
+WHEN I enter my email address
+THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+
+WHEN I click on the links in the Table of Contents
+THEN I am taken to the corresponding section of the README
+
+# Features
+
+## Question List
+
+App generates a list of question that are used to create the README document content.
+
+![Questions](/images/questions.png)
+
+## README Generation
+
+Once the user has answered all the questions, a README.md is generated that displays the data entered by the user. A Licence badge and a link to the licence terms are also added to the file.
+
+![readme](/images/readmeoutput.png)
+
+# Installation
+
+Run the below commands in the terminal:
+
+* node init
+* node install inquirer
+
+# Invoke application
+
+In other to run the application run node index.js in the terminal.
+
+# Link to Git Hub
+
+https://github.com/mp2626/ReadMe_Generator
+
+# Programming Languages/Packages
+ * JavaScript
+ * Inquirer
+
+# Authors
+Contributor - Michael Perrin
 
 
-  ![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)
-  
-  # ffef
 
-  ## Table of Contents
-  
-  [Description](#description)
-  [Installation](#installation)
-  [Usage](#usage)
-  [License](#license)
-  [Contributing](#contributions)
-  [Tests](#tests)
-  [Questions](#questions)
-  
-  
-  ## Description 
 
-  fef
-  
-  ## Installation
 
-  efe
-  
-  ## Usage 
 
-  fef
 
-  ## License 
 
-  BSD 3-Clause
 
-  To review the licence terms, please follow the link - https://opensource.org/licenses/BSD-3-Clause
 
-  ## Contributions 
 
-  fefe
 
-  ## Tests 
 
-  fef
-  
-  ## Questions 
 
-  Should you have any questions, please contact me: 
-  Git Hub - https://github.com/efe
-  Email - fef
-  
+
+
+
+https://drive.google.com/file/d/13AignF1YGsgUAFgkdpKo0kKpHV83dIdc/view?usp=sharing

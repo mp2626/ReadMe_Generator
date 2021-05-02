@@ -1,4 +1,4 @@
-// Renders licence
+// Renders licence badge depending on user selection
 function renderLicenseBadge(data) {
   switch (data) {
     case "MIT Licence":
@@ -11,7 +11,7 @@ function renderLicenseBadge(data) {
       return "![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)"
   }
 }
-
+// Renders licence link to terms depending on user selection
 function renderLicenceTerms(data) {
   switch (data) {
     case "MIT Licence":
@@ -24,7 +24,7 @@ function renderLicenceTerms(data) {
       return "https://opensource.org/licenses/BSD-3-Clause"
   }
 }
-
+// renders table of contence
 function renderTableOfContence() {
 
   return `## Table of Contents
@@ -38,7 +38,7 @@ function renderTableOfContence() {
   [Questions](#questions)
   `
 }
-
+// generates README content based on user input
 async function generateMarkdown(data) {
 
   const {
