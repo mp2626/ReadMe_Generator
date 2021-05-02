@@ -39,7 +39,7 @@ THEN I am taken to the corresponding section of the README
 
 App generates a list of question that are used to create the README document content.
 
-![Questions](/images/questions.png)
+![Questions](/images/Questions.png)
 
 ## README Generation
 
