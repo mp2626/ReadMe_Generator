@@ -65,9 +65,7 @@ const questions = () => {
 async function init() {
     try {
         const data = await questions();
-        console.log(data);
         const markDown = await generateMarkdown(data);
-        console.log(markDown);
         fs.writeFile('README.md', markDown, (err) => {
             err ? console.log(err) : console.log("README Created")
         });
